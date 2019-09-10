@@ -161,6 +161,7 @@ body::-webkit-scrollbar {
   background: #031926;
   border-top-color: #031926;
   border-top-style: solid;
+  overflow-wrap: break-word;
 }
 
 #blurb h4 {

@@ -146,6 +146,7 @@ body::-webkit-scrollbar {
     // border-top: solid;
     border-top-color: $color1;
     border-top-style: solid;
+    overflow-wrap: break-word;
     // border-width: 1px;
     // transform: translateY(-1px);
     
