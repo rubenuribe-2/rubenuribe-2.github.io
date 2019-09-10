@@ -301,6 +301,7 @@ body::-webkit-scrollbar {
 }
 
 #skills .skills {
+  margin-top: 70px;
   /* Change background color of buttons on hover */
   /* Create an active/current tablink class */
   /* Style the tab content */
