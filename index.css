@@ -41,6 +41,10 @@ body::-webkit-scrollbar {
           align-items: center;
 }
 
+#header #logo {
+  font-size: 1.2em;
+}
+
 #header a {
   color: inherit;
   text-decoration: none;
@@ -57,9 +61,17 @@ body::-webkit-scrollbar {
 }
 
 #header #nav-links li {
+  font-size: 1.2em;
   text-decoration: none;
   list-style: none;
   padding: 10px;
+}
+
+#header .btn-accent {
+  background: #9dbebb;
+  color: #031926;
+  border-radius: 6px;
+  margin-left: 10px;
 }
 
 #intro {
