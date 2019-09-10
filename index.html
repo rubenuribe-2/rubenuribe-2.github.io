@@ -12,22 +12,24 @@
 
 <body id="page">
         <nav id="header" class="section-wrap">
-                <div id="logo"><h1>Ruben</h1></div>
+                <a href="#intro-scroll"><div id="logo"><h1>Ruben</h1></div></a>
                 <div id="nav-links">
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Skills</li>
+                    <a href="#blurb-scroll"><li>About</li></a>
+                    <a href="#projects-scroll"><li>Projects</li></a>
+                    <a href="#skills-scroll"><li>Skills</li></a>
                 </div>
             </nav>
     <span id="intro-scroll"></span>
     <div id="intro" class="section section-wrap" >
+        
+        <div class="background-container">
         <div id="hello">
             <h1>Hi,</h1><br>
-            <h2>I'm <span id="name">Ruben</span>,<br>How are you doing?</h2>
+            <h2>I'm <span id="name">Ruben</span></h2>
         </div>
-        <div class="background-container">
                 <img class="background" src='img/lowpolychilling.svg'>
         </div>
+        <!-- <div class="clear"></div> -->
         
     </div>
     <span id="blurb-scroll"></span>
@@ -40,7 +42,8 @@
     <div id="projects" class="section section-wrap" >
         <h1>Projects & Experience</h1>
         <div class="projects">
-            <div id="project-1" class="grid-item">
+                <div class="spacer"></div >
+            <div id="plunder-patrol" class="grid-item">
                 <div class="project-card">
                         <div class="front-matter">
                             <div class="icon"><img src="img/whale.png" alt="plunder patrol icon" width="100px" height="auto"></div>
@@ -49,12 +52,12 @@
                     <h5 class="desc">Progresive Web App for in browser video communication.<br><br>
                         Built with NodeJS, Express, WebRTC, and SocketIO <br><br>
                         Through this project I learned how to use WebRTC, SocketIO, and how important a team is<br><br>
-                        <a href="https://plunderpatroll.herokuapp.com" target="blank">Hosted Demo</a><br>
+                        <a href="https://plunderpatroll.herokuapp.com" target="blank">Demo</a>(hosted on heroku)<br>
                         <a href="https://github.com/rubenuribe-2/PlunderPatrol" target="blank">code</a>
                     </h5>
                 </div>
             </div>
-            <div id="project-2" class="grid-item">
+            <div id="chrome-calories" class="grid-item">
                     <div class="project-card">
                         <div class="front-matter">
                             <div class="icon"><img src="img/icon-128.png" alt="plunder patrol icon" width="100px" height="auto"></div>
@@ -66,7 +69,7 @@
                         <a href="https://github.com/aggie-coding-club/Chrome_Calories" target="blank">code</a></h5>
                     </div>
             </div>
-            <div id="project-3" class="grid-item">
+            <div id="BestFit" class="grid-item">
                     <div class="project-card">
                         <div class="front-matter">
                             <div class="icon"><img src="img/BestFit Logo.png" alt="plunder patrol icon" width="100px" height="auto"></div>
@@ -78,7 +81,7 @@
                         <a href="http://www.bestfitofficial.com/" target="blank">Website</a></h5>
                     </div>
             </div>
-            <div id="project-4" class="grid-item">
+            <div id="premier" class="grid-item">
                     <div class="project-card">
                         <div class="front-matter">
                             <div class="icon"><img src="img/premier.png" alt="plunder patrol icon" width="100px" height="auto"></div>
@@ -87,7 +90,9 @@
                         <h5 class="desc">When I worked at Premier I used autocad to prepare plats of residential properties<br><br>
                         I helped make changes in the residential survey pipeline to increase office efficiency</h5>
                 </div>
+                
             </div>
+            <div class="spacer"></div >
         </div>
     </div>
     <span id="skills-scroll"></span>

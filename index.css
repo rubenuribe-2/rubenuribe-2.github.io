@@ -1,6 +1,15 @@
 /* Coolors Exported Palette - coolors.co/031926-468189-77aca2-9dbebb-f4e9cd */
 /* HSL */
 /* RGB */
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 #page {
   background: #f4e9cd;
   background-attachment: fixed;
@@ -30,6 +39,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#header a {
+  color: inherit;
+  text-decoration: none;
 }
 
 #header #nav-links {
@@ -64,13 +78,11 @@
 #intro #hello {
   margin-left: auto;
   background: #f4e9cd;
-  float: right;
-  -webkit-transform: translateX(-15%);
-          transform: translateX(-15%);
-  position: relative;
+  position: absolute;
+  right: 20%;
   text-align: right;
   margin-top: 10vw;
-  z-index: -1;
+  z-index: 2;
 }
 
 #intro #hello h1 {
@@ -87,13 +99,25 @@
   padding-top: 0;
 }
 
+#intro .clear {
+  clear: both;
+}
+
 #intro .background-container {
-  -webkit-transform: translateX(-15%);
-          transform: translateX(-15%);
+  top: calc(max(70vh - 70px -(100vw * .35),70px));
   position: relative;
   height: calc(100vw * .35866);
   width: 100vw;
-  z-index: -1;
+  z-index: -2;
+  overflow: hidden;
+  -webkit-transform: translateY(1px) translateX(-15%);
+          transform: translateY(1px) translateX(-15%);
+}
+
+@media only screen and (max-width: 840px) {
+  #intro .background-container {
+    height: calc(840px * .35);
+  }
 }
 
 #intro .background {
@@ -101,16 +125,19 @@
   left: 0;
   width: 100vw;
   min-width: 840px;
-  z-index: -1;
+  z-index: -2;
+}
+
+#blurb-scroll {
+  display: block;
+  -webkit-transform: translateY(calc(-100vw / 15));
+          transform: translateY(calc(-100vw / 15));
 }
 
 #blurb {
   background: #031926;
   border-top-color: #031926;
   border-top-style: solid;
-  border-width: 1px;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
 }
 
 #blurb h4 {
@@ -123,6 +150,16 @@
   font-family: 'Raleway', sans-serif;
 }
 
+#projects-scroll {
+  display: block;
+  -webkit-transform: translateY(-70px);
+          transform: translateY(-70px);
+}
+
+#projects::-webkit-scrollbar {
+  display: none;
+}
+
 #projects {
   background: #9dbebb;
 }
@@ -133,28 +170,31 @@
 }
 
 #projects .projects {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  margin-top: 75px;
-  grid-gap: 50px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  scrollbar-width: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow-x: scroll;
+  width: 100vw;
+  -webkit-transform: translateX(-15%);
+          transform: translateX(-15%);
 }
 
-@media only screen and (max-width: 1000px) {
-  #projects .projects {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: auto auto auto auto;
-        grid-template-rows: auto auto auto auto;
-  }
+#projects .projects .spacer {
+  background-color: none;
+  min-width: 15%;
 }
 
 #projects .projects .grid-item {
-  display: -ms-inline-grid;
-  display: inline-grid;
-  margin: 20px;
-  min-width: 300px;
+  display: block;
+  margin: 10%;
+  min-width: 50%;
+  margin-top: 75px;
+  margin-bottom: 75px;
   background-color: #77aca2;
   border-left: 10px solid #468189;
 }
@@ -190,8 +230,10 @@
 #projects .projects .grid-item .project-card .desc {
   position: relative;
   top: 0;
+  font-size: .75em;
   margin-left: 75px;
   margin-right: 50px;
+  font-family: 'Raleway', sans-serif;
   -webkit-transform: translateY(-75px);
           transform: translateY(-75px);
 }
