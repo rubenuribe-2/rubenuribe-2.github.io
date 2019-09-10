@@ -39,6 +39,7 @@ body::-webkit-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 #header #logo {
@@ -164,8 +165,28 @@ body::-webkit-scrollbar {
   overflow-wrap: break-word;
 }
 
+@media only screen and (max-width: 500px) {
+  #blurb {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #blurb {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #blurb {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
 #blurb h4 {
-  padding: 20px;
   font-size: 1.8em;
   color: #f4e9cd;
   margin: 0;
