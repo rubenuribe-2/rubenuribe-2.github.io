@@ -268,8 +268,8 @@ body::-webkit-scrollbar {
   position: relative;
   top: 0;
   font-size: 1.2em;
-  margin-left: 75px;
-  margin-right: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
   overflow-wrap: break-word;
   font-family: 'Raleway', sans-serif;
   -webkit-transform: translateY(-75px);
@@ -361,7 +361,6 @@ body::-webkit-scrollbar {
 }
 
 #skills .skills .tabcontent {
-  padding: 6px 12px;
   border-top: none;
 }
 
@@ -381,8 +380,8 @@ body::-webkit-scrollbar {
           align-items: center;
   width: 100vw;
   overflow: scroll;
-  -webkit-transform: translateX(-16%);
-          transform: translateX(-16%);
+  -webkit-transform: translateX(-15%);
+          transform: translateX(-15%);
   scrollbar-width: none;
 }
 

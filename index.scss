@@ -211,8 +211,8 @@ body::-webkit-scrollbar {
                     position: relative;
                     top: 0;
                     font-size: 1.2em;
-                    margin-left: 75px;
-                    margin-right: 50px;
+                    margin-left: 10px;
+                    margin-right: 10px;
                     overflow-wrap:break-word;
                     font-family: 'Raleway', sans-serif;
                     transform: translateY(-75px);
@@ -302,7 +302,7 @@ background-attachment: fixed;
         /* Style the tab content */
         .tabcontent {
             // display: none;
-            padding: 6px 12px;
+            // padding: 6px 12px;
             // border: 1px solid #ccc;
             border-top: none;
             ul{
@@ -313,7 +313,7 @@ background-attachment: fixed;
                 align-items: center;
                 width: 100vw;
                 overflow: scroll;
-                transform:translateX(-16%);  
+                transform:translateX(-15%);  
                 scrollbar-width: none; 
                 .skill{
                     img{
