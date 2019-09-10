@@ -269,6 +269,7 @@ body::-webkit-scrollbar {
   font-size: 1.2em;
   margin-left: 75px;
   margin-right: 50px;
+  overflow-wrap: break-word;
   font-family: 'Raleway', sans-serif;
   -webkit-transform: translateY(-75px);
           transform: translateY(-75px);
