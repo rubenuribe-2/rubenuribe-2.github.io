@@ -74,6 +74,12 @@ body::-webkit-scrollbar {
   margin-left: 10px;
 }
 
+@media only screen and (max-width: 620px) {
+  #header .btn-extra {
+    display: none;
+  }
+}
+
 #intro {
   background: none;
   margin-top: 10vh;
@@ -97,6 +103,12 @@ body::-webkit-scrollbar {
   z-index: 2;
 }
 
+@media only screen and (max-width: 450px) {
+  #intro #hello {
+    background-color: rgba(244, 233, 205, 0.5);
+  }
+}
+
 #intro #hello h1 {
   display: block;
   font-size: 3em;
@@ -105,7 +117,6 @@ body::-webkit-scrollbar {
 }
 
 #intro #hello h2 {
-  background: #f4e9cd;
   font-size: 3em;
   margin-top: 0;
   padding-top: 0;
