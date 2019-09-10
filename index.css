@@ -410,7 +410,7 @@ body::-webkit-scrollbar {
   height: 96px;
 }
 
-#skills .skills .tabcontent ul:-webkit-scrollbar {
+#skills .skills .tabcontent ul::-webkit-scrollbar {
   display: none;
 }
 
