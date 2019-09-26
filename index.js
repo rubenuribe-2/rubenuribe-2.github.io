@@ -1,20 +1,36 @@
-function openSkillSet(evt, skillSet) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
+const leftArrow= document.getElementById("left-arrow");
+const rightArrow= document.getElementById("right-arrow");
+const scrollArea = document.getElementById("project-list");
+const projects = document.getElementsByClassName("grid-item");
+const scrollPositions=document.getElementsByClassName("project-scroll");
+
+var leftScroll=function(){
+  this.disabled=true;
+  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  scrollArea.scrollLeft-=w*.71;
+  setTimeout(()=>{this.disabled=false;},500);
+}
+
+var rightScroll=function(){
+  this.disabled=true;
+  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  scrollArea.scrollLeft+=w*.71;
+  setTimeout(()=>{this.disabled=false;},500);
   
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-  
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-  
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(skillSet).style.display = "block";
-    evt.currentTarget.className += " active";
-  } 
+}
+
+var mouseScroll=function(e){
+  scrollArea.removeEventListener('wheel',mouseScroll);
+  if (e.deltaX>.025){
+    rightScroll();
+  }
+  else if( e.deltaX<-.025){
+    leftScroll();
+  }
+  setTimeout(()=>{scrollArea.addEventListener('wheel',mouseScroll);},500);
+}
+
+scrollArea.addEventListener('wheel',mouseScroll);
+
+leftArrow.addEventListener('click',leftScroll);
+rightArrow.addEventListener('click',rightScroll);
