@@ -384,6 +384,65 @@ background-attachment: fixed;
     padding-left: 15%;
     padding-right: 15%;
 }
+
+footer{
+    height: 100px;
+    background: $color4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    // background-image: url( 'img/mypattern.svg');
+    background-size: 300px;
+    // opacity:1;
+    z-index: 0;
+    .cover{
+        position: absolute;
+        right:0;
+        bottom:0;
+        top:0;
+        left:0;
+        opacity:.3;
+        z-index: 1;
+        // background-color: $color5;
+        background-image: url( 'img/mypattern.svg');
+        background-size: 250px;
+        background-position: left 30px;
+        
+    }
+    .front{
+        z-index:2;
+        opacity:1;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        background: none;
+        // background-color: red;
+        div{
+            h5{
+                font-size: .9em;
+                a{
+                    text-decoration: none;
+                }
+                a:link{
+                    color:$color1;
+                }
+                a:visited{
+                    color:$color1;
+                }
+                a:hover{
+                    color:$color2;
+                }
+                a:active{
+                    color:$color2;
+                }
+            }
+        }
+    
+    }
+}
+
 h1, h2, h3, h4, h5{
     font-family: 'Bitter', serif;
     margin: 0;

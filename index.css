@@ -467,6 +467,72 @@ body::-webkit-scrollbar {
   padding-right: 15%;
 }
 
+footer {
+  height: 100px;
+  background: #9dbebb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-size: 300px;
+  z-index: 0;
+}
+
+footer .cover {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  opacity: .3;
+  z-index: 1;
+  background-image: url("img/mypattern.svg");
+  background-size: 250px;
+  background-position: left 30px;
+}
+
+footer .front {
+  z-index: 2;
+  opacity: 1;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: none;
+}
+
+footer .front div h5 {
+  font-size: .9em;
+}
+
+footer .front div h5 a {
+  text-decoration: none;
+}
+
+footer .front div h5 a:link {
+  color: #031926;
+}
+
+footer .front div h5 a:visited {
+  color: #031926;
+}
+
+footer .front div h5 a:hover {
+  color: #468189;
+}
+
+footer .front div h5 a:active {
+  color: #468189;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: 'Bitter', serif;
   margin: 0;
