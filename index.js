@@ -4,6 +4,8 @@ const scrollArea = document.getElementById("project-list");
 const projects = document.getElementsByClassName("grid-item");
 const scrollPositions=document.getElementsByClassName("project-scroll");
 
+
+
 var leftScroll=function(){
   this.disabled=true;
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -29,6 +31,11 @@ var mouseScroll=function(e){
   }
   setTimeout(()=>{scrollArea.addEventListener('wheel',mouseScroll);},500);
 }
+
+//set the year
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
 
 scrollArea.addEventListener('wheel',mouseScroll);
 
