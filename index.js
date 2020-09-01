@@ -41,3 +41,6 @@ scrollArea.addEventListener('wheel',mouseScroll);
 
 leftArrow.addEventListener('click',leftScroll);
 rightArrow.addEventListener('click',rightScroll);
+
+const backgroundIcons = document.getElementById('page');
+

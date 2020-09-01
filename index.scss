@@ -23,12 +23,41 @@ body::-webkit-scrollbar {
 }
 
 #page{
+    position: relative;
     background: $color5;
     background-attachment: fixed;
     color: $color1;
     margin: 0;
-    background-image: url("img/mypattern.svg");
+    max-width: 100vw;
 }
+#bg-container{
+    overflow:hidden;
+}
+#bg-pattern{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+    overflow: hidden;
+    background-image: url("img/mypattern.svg");
+    background-repeat: repeat;
+    animation-name: MOVE-BG;
+    animation-duration: 80s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes MOVE-BG {
+    from {
+      transform: translateX(0);
+    }
+    to { 
+      transform: translateX(-700px) translatey(-350px);
+      right: -700px;
+      bottom: -350px;
+    }
+ }
 #header{
     background:$color1;
     color: $color4;
